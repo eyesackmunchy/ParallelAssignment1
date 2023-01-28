@@ -42,5 +42,18 @@ So, all threads are operating and no thread is waiting on another. Thus, there i
 I understand this is not as efficient, as some secitons have more primes than others, and given more time, I would find a faster approach. My reasoning was that this is my first program with multithreading, my first attempt, and I didn't want to risk anything before the deadline.
 (With this linear approach, my program completes with an average of ~3000 ms.)  
     
+
+## Mathematical correctness
+For this program, I followed the Sieve method. This method makes use of the nature of primes by starting at 0 and finding the factors.  
+Upon reading a prime (say, 2), the Sieve method marks off all multiples of 2 as composite. Logical!  
+Then, after marking off all multiples up to our max, we move on to our next prime and do the same.  
   
-For this program, I followed the Sieve method.  
+In my program, the threads all do this independently of each other. They all have their own sieve problem which has been proven correct.  
+  
+However, one noteable difference happens in the threading - some threads execute the sieve function, but they start at a number that is not 0, 1, or 2.  
+Let's say a thread starts at 10. In the current state, 10 is marked as 'prime' according to my implementation. The sieve will correctly mark off all multiples of 10 as composite and then move on to 11... But wait! The sieve does not mark 10 as composite!  
+  
+Not to worry, the first thread which looks at '2' will eventually mark off '10' as composite as all threads have access to the entire array. The thread look out for each other, so the sieve method is correctly carried out in each thread AND as a whole program.  
+  
+  
+Q.E.D.
