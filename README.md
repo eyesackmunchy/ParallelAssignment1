@@ -53,7 +53,7 @@ In my program, the threads all do this independently of each other. They all hav
 However, one noteable difference happens in the threading - some threads execute the sieve function, but they start at a number that is not 0, 1, or 2.  
 Let's say a thread starts at 10. In the current state, 10 is marked as 'prime' according to my implementation. The sieve will correctly mark off all multiples of 10 as composite and then move on to 11... But wait! The sieve does not mark 10 as composite!  
   
-Not to worry, the first thread which looks at '2' will eventually mark off '10' as composite as all threads have access to the entire array. The thread look out for each other, so the sieve method is correctly carried out in each thread AND as a whole program.  
+Not to worry! The first thread which looks at '2' will eventually mark off '10' as composite as all threads have access to the entire array. The thread look out for each other, so the sieve method is correctly carried out in each thread AND as a whole program.  
   
   
 Q.E.D.
