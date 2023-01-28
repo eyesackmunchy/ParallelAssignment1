@@ -1,9 +1,9 @@
-# ParallelAssignment1
-`g++ -std=c++20 -pthread primes.cpp`
-to compile, then
+# ParallelAssignment1  
+`g++ -std=c++20 -pthread primes.cpp`  
+to compile, then  
 `.\a`
-to execute. Output will get saved to primes.txt in the format
-`<execution time> <total number of primes found> <sum of all primes found> <top ten maximum primes, listed in order from lowest to highest>`
+to execute. Output will get saved to primes.txt in the format  
+`<execution time> <total number of primes found> <sum of all primes found> <top ten maximum primes, listed in order from lowest to highest>`  
 
 Isaac Munshi is391848 5090407 1/27/2023
 COP 4520 Concepts of Parallel and Distributed Processing1/27/2023
