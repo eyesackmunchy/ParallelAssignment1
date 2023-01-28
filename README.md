@@ -5,8 +5,8 @@ to compile, then
 to execute. Output will get saved to primes.txt in the format  
 `<execution time> <total number of primes found> <sum of all primes found> <top ten maximum primes, listed in order from lowest to highest>`   
 
-####Isaac Munshi is391848 5090407 1/27/2023  
-COP 4520 Concepts of Parallel and Distributed Processing1/27/2023  
+#### Isaac Munshi is391848 5090407 1/27/2023  
+#### COP 4520 Concepts of Parallel and Distributed Processing1/27/2023  
 
 Find all primes from 0 to 10^8. 0 and 1 are not prime.   
 Find num of primes, sum of primes, and top 10 biggest primes.  
